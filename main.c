@@ -413,7 +413,8 @@ int main() {
     };
     vkCmdSetScissor(commandBuffer, 0, 1, &scissor);
     vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, pipeline);
-    vkCmdDraw(commandBuffer, 4, 1, 0, 0);
+    //change to 4 to get rectangle
+    vkCmdDraw(commandBuffer, 3, 1, 0, 0);
     vkCmdEndRenderPass(commandBuffer);
     VK_CHECK(vkEndCommandBuffer(commandBuffer));
     VkSubmitInfo submitInfo = {
